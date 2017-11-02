@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 // NgModule is a decorator function that takes a single metadata object whose properties describe the module 
 @NgModule({
   // the view classes that belong to this module. Angular has three kinds of view classes: components, directives, and pipes.
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroesComponent,
+    DashboardComponent
   ],
   // other modules whose exported classes are needed by component templates declared in this module.
   imports: [
