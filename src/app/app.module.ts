@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule }    from '@angular/http';
+import {InMemoryDataService}	from './services/in-memory-data.service';
+import {InMemoryWebApiModule}	from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -18,6 +20,8 @@ import {HeroService} 		from './services/hero.service';
   // other modules whose exported classes are needed by component templates declared in this module.
   imports: [
     BrowserModule,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
   ],
   // - creators of services that this module contributes to the global collection of services; they become accessible in all parts of the app.
